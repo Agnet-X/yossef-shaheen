@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "al-emaratiya": "/images/portfolio/al-emaratiya.png",
+    "farij-al-badu": "/images/portfolio/farij-al-badu.png",
+    "mazaraena": "/images/portfolio/mazaraena.png",
+    "athar-al-sharqiya": "/images/portfolio/athar-al-sharqiya.png",
+    "kunooz-min-al-wasat": "/images/portfolio/kunooz-min-al-wasat.png",
+    "smart-digital-government": "/images/portfolio/smart-digital-government.png",
+    "let-us-unite-corona": "/images/portfolio/let-us-unite-corona.png",
+    "awael": "/images/portfolio/awael.png",
+    "joy-health": "/images/portfolio/joy-health.png",
+    "here-we-are": "/images/portfolio/here-we-are.png",
+    "ard-al-khair": "/images/portfolio/ard-al-khair.png",
+    "hanin-al-shawati": "/images/portfolio/hanin-al-shawati.png",
+    "rehleti": "/images/portfolio/rehleti.png",
+    "safari-al-sharjah": "/images/portfolio/safari-al-sharjah.png",
+    "asakum-ala-al-quwa": "/images/portfolio/asakum-ala-al-quwa.png",
+    "sunea-fi-sharjah": "/images/portfolio/sunea-fi-sharjah.png",
+    "jehoudu-khafiya": "/images/portfolio/jehoudu-khafiya.png",
+    "maazen-al-sharjah": "/images/portfolio/maazen-al-sharjah.png",
+    "min-al-bahr": "/images/portfolio/min-al-bahr.png",
+    "aamaq-al-bahr": "/images/portfolio/aamaq-al-bahr.png",
+    "andiyat-al-wasat": "/images/portfolio/andiyat-al-wasat.png",
+    "khairat-al-wasat": "/images/portfolio/khairat-al-wasat.png",
+    "muhafazat-al-sharqiya": "/images/portfolio/muhafazat-al-sharqiya.png"
+  },
+  "certificates": {
+    "canon-lighting": "/images/certificates/canon-lighting.png",
+    "humanitarian-forum": "/images/certificates/humanitarian-forum.png"
+  },
+  "bts": [
+    "/images/bts/bts_p30_img2.png",
+    "/images/bts/bts_p30_img3.png",
+    "/images/bts/bts_p30_img4.png",
+    "/images/bts/bts_p30_img5.png",
+    "/images/bts/bts_p30_img6.png",
+    "/images/bts/bts_p30_img7.png",
+    "/images/bts/bts_p30_img8.png",
+    "/images/bts/bts_p30_img9.png",
+    "/images/bts/bts_p31_img2.png",
+    "/images/bts/bts_p31_img3.png",
+    "/images/bts/bts_p31_img4.png",
+    "/images/bts/bts_p31_img5.png",
+    "/images/bts/bts_p31_img6.png",
+    "/images/bts/bts_p31_img7.png",
+    "/images/bts/bts_p31_img8.png",
+    "/images/bts/bts_p31_img9.png"
+  ],
+  "equipmentByCategory": {
+    "cinema-cameras": [
+      "/images/equipment/equip_p25_img1.png",
+      "/images/equipment/equip_p25_img2.png",
+      "/images/equipment/equip_p25_img3.png"
+    ],
+    "lenses": [
+      "/images/equipment/equip_p26_img1.png",
+      "/images/equipment/equip_p26_img2.png",
+      "/images/equipment/equip_p26_img3.png",
+      "/images/equipment/equip_p26_img4.png",
+      "/images/equipment/equip_p27_img1.png"
+    ],
+    "stabilizers-rigs": [
+      "/images/equipment/equip_p27_img2.png",
+      "/images/equipment/equip_p27_img3.png",
+      "/images/equipment/equip_p27_img4.png",
+      "/images/equipment/equip_p28_img1.png",
+      "/images/equipment/equip_p28_img2.png",
+      "/images/equipment/equip_p28_img3.png"
+    ],
+    "lighting": [
+      "/images/equipment/equip_p28_img4.png",
+      "/images/equipment/equip_p28_img5.png",
+      "/images/equipment/equip_p28_img6.png",
+      "/images/equipment/equip_p29_img1.png",
+      "/images/equipment/equip_p29_img2.png",
+      "/images/equipment/equip_p29_img3.png",
+      "/images/equipment/equip_p30_img1.png",
+      "/images/equipment/equip_p30_img2.png",
+      "/images/equipment/equip_p30_img3.png",
+      "/images/equipment/equip_p30_img4.png",
+      "/images/equipment/equip_p30_img5.png"
+    ],
+    "drones": [
+      "/images/equipment/equip_p31_img1.png",
+      "/images/equipment/equip_p31_img2.png",
+      "/images/equipment/equip_p31_img3.png",
+      "/images/equipment/equip_p31_img4.png"
+    ],
+    "audio": [
+      "/images/equipment/equip_p32_img1.png",
+      "/images/equipment/equip_p32_img2.png",
+      "/images/equipment/equip_p32_img3.png",
+      "/images/equipment/equip_p32_img4.png"
+    ],
+    "post-production": [
+      "/images/equipment/equip_p33_img1.png",
+      "/images/equipment/equip_p33_img2.png",
+      "/images/equipment/equip_p33_img3.png"
+    ]
+  }
+}
