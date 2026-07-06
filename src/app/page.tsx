@@ -5,6 +5,7 @@ import { Vision, Mission } from "@/components/sections/VisionMission";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Services } from "@/components/sections/Services";
 import { Projects } from "@/components/sections/Projects";
+import { ProMediaCertificatesBanner } from "@/components/sections/ProMediaCertificatesBanner";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { BehindTheScenes } from "@/components/sections/BehindTheScenes";
 import { Equipment } from "@/components/sections/Equipment";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <Services />
       <Projects />
+      <ProMediaCertificatesBanner />
       <CaseStudies />
       <BehindTheScenes />
       <Equipment />

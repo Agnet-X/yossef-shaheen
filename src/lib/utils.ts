@@ -23,7 +23,8 @@ export function getYouTubeThumbnail(url: string): string {
 
 export function getProjectImage(slug: string): string {
   const mapped = imageMap.projects[slug as keyof typeof imageMap.projects];
-  return mapped ?? `/images/portfolio/${slug}.png`;
+  const path = mapped ?? `/images/portfolio/${slug}.png`;
+  return path.replace(/\.png$/i, ".webp");
 }
 
 export function getProjectLink(project: Project): string {

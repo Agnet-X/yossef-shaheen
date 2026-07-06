@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 import { useScrollTo } from "@/components/providers/SmoothScroll";
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
 
-const navItems = [
+const scrollNavItems = [
   { id: "about", ar: "من نحن", en: "About" },
   { id: "certificates", ar: "شهاداتي", en: "Certificates" },
   { id: "vision", ar: "رؤيتنا", en: "Vision" },
@@ -63,8 +64,8 @@ export function Navbar() {
             </span>
           </button>
 
-          <nav className="hidden items-center gap-8 lg:flex">
-            {navItems.map((item) => (
+          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+            {scrollNavItems.map((item) => (
               <button
                 key={item.id}
                 type="button"
@@ -74,6 +75,12 @@ export function Navbar() {
                 {t({ ar: item.ar, en: item.en })}
               </button>
             ))}
+            <Link
+              href="/promedia-certificates"
+              className="text-[11px] uppercase tracking-[0.2em] text-[#D4AF37]/80 transition-colors hover:text-[#D4AF37]"
+            >
+              {lang === "ar" ? "شهادات بروميديا" : "PRO MEDIA Certs"}
+            </Link>
           </nav>
 
           <div className="flex items-center gap-4">
@@ -118,7 +125,7 @@ export function Navbar() {
                 </button>
               </div>
               <nav className="mt-16 flex flex-col gap-6">
-                {navItems.map((item, i) => (
+                {scrollNavItems.map((item, i) => (
                   <motion.button
                     key={item.id}
                     initial={{ opacity: 0, x: dir === "rtl" ? 30 : -30 }}
@@ -131,6 +138,19 @@ export function Navbar() {
                     {t({ ar: item.ar, en: item.en })}
                   </motion.button>
                 ))}
+                <motion.div
+                  initial={{ opacity: 0, x: dir === "rtl" ? 30 : -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: scrollNavItems.length * 0.05 }}
+                >
+                  <Link
+                    href="/promedia-certificates"
+                    onClick={() => setMobileOpen(false)}
+                    className="text-3xl font-light text-[#D4AF37]/90 transition-colors hover:text-[#D4AF37]"
+                  >
+                    {lang === "ar" ? "شهادات بروميديا" : "PRO MEDIA Certificates"}
+                  </Link>
+                </motion.div>
               </nav>
               <button
                 type="button"
