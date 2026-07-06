@@ -168,9 +168,9 @@ export function Hero() {
           <motion.div
             style={{ scale: portraitScale }}
             className="relative order-1 lg:order-2"
-            initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ delay: 2.2, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link
               href="/yousef-shaheen"
@@ -179,7 +179,7 @@ export function Hero() {
               <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 via-transparent to-[#D4AF37]/5 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="glass-panel luxury-shadow relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]">
                 <MediaImage
-                  src="/images/team/yousef-shaheen.png"
+                  src={yousef?.image ?? "/images/team/yousef-shaheen.webp"}
                   alt="Yousef M K Shaheen - Executive Producer"
                   priority
                   className="h-full w-full object-cover object-top"

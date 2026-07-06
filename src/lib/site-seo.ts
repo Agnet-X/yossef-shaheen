@@ -77,7 +77,7 @@ export const personJsonLd = {
     "https://www.instagram.com/yousefshaheen",
     "https://www.instagram.com/yousefsh1",
   ],
-  image: "/images/team/yousef-shaheen.png",
+  image: "/images/team/yousef-shaheen.webp",
 };
 
 export function createSiteMetadata(overrides?: Metadata): Metadata {
@@ -106,7 +106,7 @@ export function createSiteMetadata(overrides?: Metadata): Metadata {
       url: siteUrl,
       images: [
         {
-          url: "/images/team/yousef-shaheen.png",
+          url: "/images/team/yousef-shaheen.webp",
           width: 800,
           height: 1067,
           alt: "Yousef M K Shaheen — Executive Producer",
@@ -117,7 +117,7 @@ export function createSiteMetadata(overrides?: Metadata): Metadata {
       card: "summary_large_image",
       title: defaultTitle,
       description: defaultDescription,
-      images: ["/images/team/yousef-shaheen.png"],
+      images: ["/images/team/yousef-shaheen.webp"],
     },
     robots: {
       index: true,

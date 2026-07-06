@@ -28,6 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className="scroll-smooth">
+      <head>
+        <link
+          rel="preload"
+          href="/images/team/yousef-shaheen.webp"
+          as="image"
+          fetchPriority="high"
+        />
+      </head>
       <body
         className={`${inter.variable} ${ibmPlexArabic.variable} min-h-screen bg-[#0B0B0B] text-white antialiased`}
       >

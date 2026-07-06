@@ -3,22 +3,46 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const HERO_PORTRAIT = "/images/team/yousef-shaheen.webp";
+
 export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    let finished = false;
+
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      setProgress(100);
+      setTimeout(() => setLoading(false), 250);
+    };
+
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = HERO_PORTRAIT;
+    link.setAttribute("fetchpriority", "high");
+    document.head.appendChild(link);
+
+    const portrait = new window.Image();
+    portrait.decoding = "sync";
+    portrait.onload = finish;
+    portrait.onerror = finish;
+    portrait.src = HERO_PORTRAIT;
+
     const interval = setInterval(() => {
-      setProgress((p) => {
-        if (p >= 100) {
-          clearInterval(interval);
-          setTimeout(() => setLoading(false), 400);
-          return 100;
-        }
-        return p + Math.random() * 15 + 5;
-      });
-    }, 120);
-    return () => clearInterval(interval);
+      setProgress((p) => Math.min(p + Math.random() * 18 + 8, 95));
+    }, 100);
+
+    const maxWait = setTimeout(finish, 2200);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(maxWait);
+      link.remove();
+    };
   }, []);
 
   return (

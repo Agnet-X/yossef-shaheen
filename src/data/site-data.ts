@@ -384,7 +384,7 @@ export const featuredTeamMember: TeamMember = {
     en: "Executive Producer — TV Director — Director of Photography",
   },
   featured: true,
-  image: "/images/team/yousef-shaheen.png",
+  image: "/images/team/yousef-shaheen.webp",
   nationality: {
     ar: "فلسطيني",
     en: "Palestinian",

@@ -62,7 +62,7 @@ export function YousefProfileClient() {
               <div className="glass-panel luxury-shadow overflow-hidden rounded-2xl">
                 <div className="relative aspect-[3/4]">
                   <MediaImage
-                    src={yousef.image ?? "/images/team/yousef-shaheen.png"}
+                    src={yousef.image ?? "/images/team/yousef-shaheen.webp"}
                     alt={yousef.name}
                     fill
                     priority

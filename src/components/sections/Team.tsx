@@ -31,7 +31,7 @@ export function Team() {
             <div className="grid lg:grid-cols-2">
               <div className="relative aspect-[4/5] lg:aspect-auto">
                 <MediaImage
-                  src={featuredTeamMember.image ?? "/images/team/yousef-shaheen.png"}
+                  src={featuredTeamMember.image ?? "/images/team/yousef-shaheen.webp"}
                   alt={featuredTeamMember.name}
                   fill
                   className="object-cover object-top"

@@ -38,11 +38,20 @@ export function MediaImage({
     alt,
     src,
     loading: priority ? ("eager" as const) : ("lazy" as const),
-    decoding: "async" as const,
+    fetchPriority: priority ? ("high" as const) : ("auto" as const),
+    decoding: priority ? ("sync" as const) : ("async" as const),
     onLoad: () => setLoaded(true),
     onError: handleError,
     ...props,
   };
+
+  const imgClassName = cn(
+    fill
+      ? "absolute inset-0 h-full w-full transition-opacity duration-300"
+      : "h-full w-full transition-opacity duration-300",
+    loaded || priority ? "opacity-100" : "opacity-0",
+    className
+  );
 
   if (fill) {
     return (
@@ -51,27 +60,28 @@ export function MediaImage({
           <div className="absolute inset-0 animate-pulse bg-white/5" aria-hidden />
         )}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          {...imgProps}
-          className={cn(
-            "absolute inset-0 h-full w-full transition-opacity duration-500",
-            loaded ? "opacity-100" : "opacity-0",
-            className
-          )}
-        />
+        <img {...imgProps} className={imgClassName} />
       </>
+    );
+  }
+
+  if (priority) {
+    return (
+      <div className="relative h-full w-full">
+        {!loaded && (
+          <div
+            className="absolute inset-0 animate-pulse bg-gradient-to-br from-white/10 to-white/5"
+            aria-hidden
+          />
+        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img {...imgProps} className={imgClassName} />
+      </div>
     );
   }
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img
-      {...imgProps}
-      className={cn(
-        "transition-opacity duration-500",
-        loaded ? "opacity-100" : "opacity-0",
-        className
-      )}
-    />
+    <img {...imgProps} className={imgClassName} />
   );
 }

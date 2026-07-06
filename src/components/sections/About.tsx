@@ -37,7 +37,7 @@ export function About() {
               <div className="mb-8 flex items-center gap-6">
                 <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-[#D4AF37]/30">
                   <MediaImage
-                    src="/images/team/yousef-shaheen.png"
+                    src={featuredTeamMember.image ?? "/images/team/yousef-shaheen.webp"}
                     alt="Yousef Shaheen"
                     fill
                     className="object-cover object-top"
