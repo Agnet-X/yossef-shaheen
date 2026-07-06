@@ -71,6 +71,15 @@ body {
   background-clip: text;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .glass-panel {
   background: var(--glass);
   backdrop-filter: blur(24px);

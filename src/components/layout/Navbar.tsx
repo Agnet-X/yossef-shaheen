@@ -44,10 +44,10 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.8, duration: 0.8 }}
         className={cn(
-          "fixed top-0 z-50 w-full transition-all duration-700",
+          "fixed top-0 z-50 w-full transition-all duration-500",
           scrolled
-            ? "glass-panel border-b border-white/5 py-4"
-            : "bg-transparent py-6"
+            ? "border-b border-white/10 bg-[#0B0B0B]/95 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.65)] backdrop-blur-xl"
+            : "border-b border-transparent bg-[#0B0B0B]/55 py-5 backdrop-blur-md"
         )}
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 lg:px-12">

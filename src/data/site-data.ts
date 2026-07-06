@@ -108,6 +108,7 @@ export interface Client {
   name: BilingualText;
   category: "government" | "semi-government" | "event";
   note?: BilingualText;
+  logo?: string;
 }
 
 export interface Certificate {
@@ -1354,36 +1355,43 @@ export const clients: Client[] = [
       en: "Federal Authority for Identity & Citizenship",
     },
     category: "government",
+    logo: "/images/clients/logo-03.webp",
   },
   {
     id: "dubai-police",
     name: { ar: "شرطة دبي", en: "Dubai Police" },
     category: "government",
+    logo: "/images/clients/logo-04.webp",
   },
   {
     id: "sharjah-municipality",
     name: { ar: "بلدية الشارقة", en: "Sharjah Municipality" },
     category: "government",
+    logo: "/images/clients/logo-05.webp",
   },
   {
     id: "dubai-municipality",
     name: { ar: "بلدية دبي", en: "Dubai Municipality" },
     category: "government",
+    logo: "/images/clients/logo-06.webp",
   },
   {
     id: "tadweer",
     name: { ar: "تدوير", en: "Tadweer" },
     category: "government",
+    logo: "/images/clients/logo-07.webp",
   },
   {
     id: "expo-2020",
     name: { ar: "إكسبو 2020", en: "Expo 2020" },
     category: "event",
+    logo: "/images/clients/logo-08.webp",
   },
   {
     id: "global-village",
     name: { ar: "القرية العالمية", en: "Global Village" },
     category: "event",
+    logo: "/images/clients/logo-09.webp",
   },
   {
     id: "sharjah-book-fair",
@@ -1393,6 +1401,7 @@ export const clients: Client[] = [
     },
     category: "event",
     note: { ar: "4 سنوات", en: "4 years" },
+    logo: "/images/clients/logo-10.webp",
   },
   {
     id: "abu-dhabi-book-fair",
@@ -1402,6 +1411,7 @@ export const clients: Client[] = [
     },
     category: "event",
     note: { ar: "سنتين", en: "2 years" },
+    logo: "/images/clients/logo-11.webp",
   },
   {
     id: "sharouq-investment",
@@ -1410,11 +1420,13 @@ export const clients: Client[] = [
       en: "Sharouq Development & Investment Authority",
     },
     category: "semi-government",
+    logo: "/images/clients/logo-12.webp",
   },
   {
     id: "dubai-health-city",
     name: { ar: "مدينة دبي الطبية", en: "Dubai Health City" },
     category: "semi-government",
+    logo: "/images/clients/logo-13.webp",
   },
   {
     id: "university-city-sharjah",
@@ -1423,6 +1435,7 @@ export const clients: Client[] = [
       en: "University City — Sharjah",
     },
     category: "semi-government",
+    logo: "/images/clients/logo-14.webp",
   },
   {
     id: "al-majaz-theatre",
