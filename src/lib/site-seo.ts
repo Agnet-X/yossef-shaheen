@@ -56,6 +56,7 @@ export const personJsonLd = {
     "Social media video production",
   ],
   award: [
+    "Letter of Thanks & Appreciation — National Media Office, UAE",
     "Canon Portrait Lighting Course — Mohammed bin Rashid Foundation for SME Development (2021)",
     "Certificate of Appreciation — Humanitarian Initiatives Forum Dubai (2019)",
   ],

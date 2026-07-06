@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import { YoussefCertificatesShowcase } from "@/components/sections/YoussefCertificatesShowcase";
 import {
   featuredTeamMember,
   youssefCertificates,
@@ -296,25 +297,8 @@ export function YousefProfileClient() {
                 transition={{ delay: 0.45 }}
               >
                 <SectionLabel ar="الشهادات" en="Certificates" lang={lang} />
-                <div className="mt-6 grid gap-4 md:grid-cols-2">
-                  {youssefCertificates.map((cert) => (
-                    <div key={cert.id} className="glass-panel overflow-hidden rounded-xl">
-                      {cert.image && (
-                        <div className="relative aspect-[4/3] bg-white/5">
-                          <MediaImage
-                            src={cert.image}
-                            alt={t(cert.title)}
-                            fill
-                            className="object-contain p-4"
-                          />
-                        </div>
-                      )}
-                      <div className="p-4">
-                        <p className="text-sm text-white/80">{t(cert.title)}</p>
-                        <p className="mt-1 text-xs text-[#D4AF37]">{t(cert.issuer)}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div className="mt-6">
+                  <YoussefCertificatesShowcase certificates={youssefCertificates} compact />
                 </div>
               </motion.section>
 

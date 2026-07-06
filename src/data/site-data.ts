@@ -117,6 +117,7 @@ export interface Certificate {
   issuer: BilingualText;
   year?: number;
   image?: string;
+  featured?: boolean;
 }
 
 export interface TimelineEntry {
@@ -502,6 +503,19 @@ export const youssefLatestHighlights = [
 ] as const;
 
 export const youssefCertificates: Certificate[] = [
+  {
+    id: "national-media-office",
+    featured: true,
+    title: {
+      ar: "رسالة شكر وتقدير — المكتب الوطني للإعلام",
+      en: "Letter of Thanks & Appreciation — National Media Office",
+    },
+    issuer: {
+      ar: "المكتب الوطني للإعلام — دولة الإمارات العربية المتحدة",
+      en: "National Media Office — United Arab Emirates",
+    },
+    image: "/images/certificates/national-media-office.webp",
+  },
   {
     id: "canon-lighting",
     title: {
