@@ -15,6 +15,7 @@ import {
   projects,
 } from "@/data/site-data";
 import { MediaImage } from "@/components/ui/MediaImage";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
   buildWhatsAppUrl,
@@ -82,7 +83,11 @@ export function YousefProfileClient() {
                       {yousef.qualification ? ` · ${t(yousef.qualification)}` : ""}
                     </p>
                   )}
-                  {yousef.phone && <p className="mt-4 text-sm text-white/70">{yousef.phone}</p>}
+                  {yousef.phone && (
+                    <p className="mt-4 text-sm text-white/70">
+                      <PhoneNumber phone={yousef.phone} />
+                    </p>
+                  )}
                   {yousef.social?.instagram && (
                     <div className="mt-2 flex flex-wrap gap-2 text-xs text-white/40">
                       {yousef.social.instagram.map((ig) => (

@@ -55,8 +55,22 @@ export function buildWhatsAppUrl(phone: string, message: string): string {
   return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
 }
 
+export const DISPLAY_PHONE = "+971 55 626 7779";
+
+export function formatPhoneDisplay(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.startsWith("971") && digits.length >= 12) {
+    return `+971 ${digits.slice(3, 5)} ${digits.slice(5, 8)} ${digits.slice(8)}`;
+  }
+  if (digits.length >= 10) {
+    return `+${digits.slice(0, 3)} ${digits.slice(3, 5)} ${digits.slice(5, 8)} ${digits.slice(8)}`;
+  }
+  return phone;
+}
+
 export function getCertificateImage(id: string): string | undefined {
-  return imageMap.certificates[id as keyof typeof imageMap.certificates];
+  const mapped = imageMap.certificates[id as keyof typeof imageMap.certificates];
+  return mapped?.replace(/\.png$/i, ".webp");
 }
 
 export const btsImages: string[] = imageMap.bts;

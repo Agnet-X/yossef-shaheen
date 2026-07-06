@@ -47,9 +47,10 @@ export function MediaImage({
 
   const imgClassName = cn(
     fill
-      ? "absolute inset-0 h-full w-full transition-opacity duration-300"
+      ? "absolute inset-0 h-full w-full"
       : "h-full w-full transition-opacity duration-300",
-    loaded || priority ? "opacity-100" : "opacity-0",
+    fill || loaded || priority ? "opacity-100" : "opacity-0",
+    !fill && "transition-opacity duration-300",
     className
   );
 

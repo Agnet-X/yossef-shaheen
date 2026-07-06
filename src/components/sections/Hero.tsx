@@ -7,6 +7,7 @@ import { MediaImage } from "@/components/ui/MediaImage";
 import { useLanguage } from "@/context/LanguageContext";
 import { statistics, featuredTeamMember } from "@/data/site-data";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import { HiOutlinePlay } from "react-icons/hi2";
 
 export function Hero() {
@@ -178,6 +179,19 @@ export function Hero() {
             >
               <div className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 via-transparent to-[#D4AF37]/5 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="glass-panel luxury-shadow relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.01]">
+                <motion.div
+                  className="pointer-events-none absolute start-3 top-3 z-20 lg:hidden"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2.8, ease: "easeInOut" }}
+                >
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/50 bg-[#0B0B0B]/80 px-3.5 py-2 text-[11px] font-medium text-[#D4AF37] shadow-[0_4px_24px_rgba(0,0,0,0.45)] backdrop-blur-md">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#D4AF37]/60" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-[#D4AF37]" />
+                    </span>
+                    {lang === "ar" ? "اضغط لمعرفة المزيد" : "Tap to learn more"}
+                  </span>
+                </motion.div>
                 <MediaImage
                   src={yousef?.image ?? "/images/team/yousef-shaheen.webp"}
                   alt="Yousef M K Shaheen - Executive Producer"
@@ -199,9 +213,11 @@ export function Hero() {
                       </p>
                       <p className="mt-1 text-lg text-white">{yousef?.name}</p>
                     </div>
-                    <div className="text-right text-xs text-white/50">
-                      <p>+971 55 626 7779</p>
-                      <p>@yousefshaheen</p>
+                    <div className="text-end text-xs text-white/50">
+                      <PhoneNumber phone={yousef?.phone} />
+                      <p dir="ltr" className="[unicode-bidi:embed]">
+                        @yousefshaheen
+                      </p>
                     </div>
                   </div>
                 </div>

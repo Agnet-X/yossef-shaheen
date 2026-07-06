@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { buildWhatsAppUrl } from "@/lib/utils";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import {
   HiOutlinePhone,
   HiOutlineEnvelope,
@@ -110,33 +111,43 @@ export function Contact() {
               <div className="glass-panel rounded-2xl p-8">
                 {[
                   {
+                    id: "address",
                     icon: HiOutlineMapPin,
                     label: lang === "ar" ? "العنوان" : "Address",
                     value: t(companyInfo.contact.address),
                   },
                   {
+                    id: "phone",
                     icon: HiOutlinePhone,
                     label: lang === "ar" ? "واتساب يوسف شاهين" : "Yousef Shaheen WhatsApp",
                     value: featuredTeamMember.phone ?? companyInfo.contact.phone,
                   },
                   {
+                    id: "email",
                     icon: HiOutlineEnvelope,
                     label: lang === "ar" ? "إيميل" : "Email",
                     value: companyInfo.contact.email,
                   },
                   {
+                    id: "website",
                     icon: HiOutlineGlobeAlt,
                     label: lang === "ar" ? "الموقع" : "Website",
                     value: companyInfo.contact.website,
                   },
                 ].map((item) => (
-                  <div key={item.label} className="mb-6 flex gap-4 last:mb-0">
+                  <div key={item.id} className="mb-6 flex gap-4 last:mb-0">
                     <item.icon className="shrink-0 text-[#D4AF37]" size={20} />
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white/40">
                         {item.label}
                       </p>
-                      <p className="mt-1 text-white/80">{item.value}</p>
+                      <p className="mt-1 text-white/80">
+                        {item.id === "phone" ? (
+                          <PhoneNumber phone={String(item.value)} />
+                        ) : (
+                          item.value
+                        )}
+                      </p>
                     </div>
                   </div>
                 ))}

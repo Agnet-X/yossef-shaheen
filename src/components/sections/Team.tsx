@@ -4,6 +4,7 @@ import { MediaImage } from "@/components/ui/MediaImage";
 import { useLanguage } from "@/context/LanguageContext";
 import { teamMembers, featuredTeamMember } from "@/data/site-data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
 export function Team() {
@@ -55,7 +56,7 @@ export function Team() {
                 )}
                 <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/40">
                   {featuredTeamMember.phone && (
-                    <span>{featuredTeamMember.phone}</span>
+                    <PhoneNumber phone={featuredTeamMember.phone} />
                   )}
                   {featuredTeamMember.social?.instagram?.map((ig) => (
                     <span key={ig}>{ig}</span>

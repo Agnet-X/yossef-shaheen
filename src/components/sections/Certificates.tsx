@@ -85,6 +85,7 @@ export function Certificates() {
             <MediaImage
               src={lightbox}
               alt="Certificate full view"
+              priority
               className="max-h-[90vh] w-auto object-contain"
             />
           </motion.div>

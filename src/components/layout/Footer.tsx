@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { companyInfo } from "@/data/site-data";
+import { PhoneNumber } from "@/components/ui/PhoneNumber";
 
 export function Footer() {
   const { lang, t } = useLanguage();
@@ -20,7 +21,7 @@ export function Footer() {
             </p>
           </div>
           <div className="text-center text-sm text-white/40 md:text-end">
-            <p>{companyInfo.contact.phone}</p>
+            <PhoneNumber phone={companyInfo.contact.phone} />
             <p>{companyInfo.contact.email}</p>
             <p className="mt-1">{companyInfo.contact.website}</p>
           </div>

@@ -101,6 +101,7 @@ export function ProMediaCertificatesClient() {
             <MediaImage
               src={lightbox}
               alt="Certificate"
+              priority
               className="max-h-[90vh] w-auto object-contain"
             />
           </motion.div>
